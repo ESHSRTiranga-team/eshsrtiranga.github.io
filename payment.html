@@ -112,6 +112,11 @@
 
 			<div>
 				<div class = "qrcode" id="qrcode">
+				</br>
+				<h2> OR </h2>
+				</br>
+				<a href = "upi://pay?pn=EuroSchool HSR&pa=s.muniraj009-1@okhdfcbank&cu=INR&am=" id ="link"><p>Click To Pay</p></a>
+				
 					
 				</div>
 
@@ -220,11 +225,13 @@
 			}
 			);
 
+			let linkPara= document.getElementById("link");
 			let costPara = document.getElementById("Cost");
 			let eventsPara = document.getElementById("Events")
 
 			costPara.innerHTML = "Cost: Rs."+cost;
 			eventsPara.innerHTML = "Number of events chosen: "+nevents
+			linkPara.href = "upi://pay?pa=dhanuktp@okaxis&pn=Dhanunjaya%20Pasupuleti&aid=uGICAgIDwl_jIXw&am="+cost;
 
             const scriptURL = 'https://script.google.com/macros/s/AKfycbyeckWnOahFHJKPJILOGNVxpzSXB0T8J3jhlkUxiF-74VOPP8B8x735i-iFrnj4FBxakg/exec'
             const form = document.forms['google-sheet']
